@@ -7,6 +7,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "TB_ALUNO")
 @Data
+@NamedQuery(name = "buscarAlunoPorCpf",
+        query = "SELECT al FROM AlunoEntity al where al.cpf =: cpf")
 public class AlunoEntity {
 
     @Id
